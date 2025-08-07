@@ -7,7 +7,7 @@ This is just a Next.js frontend for [mochi](https://github.com/synbhwl/mochi), a
 ## 🛠 Tech Stack
 
 - **Frontend:** Next.js, Tailwind CSS  
-- **Backend API:** FastAPI (developed by [@your-friend](https://github.com/your-friend))
+- **Backend API:** FastAPI (developed by [@this guy](https://github.com/synbhwl))
 
 ---
 
