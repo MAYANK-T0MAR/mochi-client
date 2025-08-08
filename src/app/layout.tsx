@@ -22,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-inter antialiased px-5 pt-44`}
+        className={`${inter.variable} font-inter antialiased px-5 pt-44 relative overflow-hidden`}
       >
         {children}
+        <div className="select-none pointer-events-none top-[-10px] left-[-10px] absolute -z-10 w-screen h-screen bg-background bg-[linear-gradient(to_right,#d3d3d3_1px,transparent_1px),linear-gradient(to_bottom,#d3d3d3_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
       </body>
     </html>
   );
