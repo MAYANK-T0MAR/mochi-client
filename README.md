@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/Status-Work_in_Progress-yellow?style=for-the-badge)
 
 
-# Mochi – Frontend
+# Mochi – Client
 
 This is just a Next.js frontend for [mochi](https://github.com/synbhwl/mochi), a URL shortener service powered by [Sayan](https://github.com/synbhwl) and FastAPI. Mochi is a URL shortner service that shortens the url 💀.
 
