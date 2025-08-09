@@ -26,8 +26,7 @@ export default function Home() {
 
         <URLinputbox/>
 
-        <div className="flex gap-4 items-center">
-          <CustomUrlBox />
+        <div className="flex items-center w-full justify-center">
           <div className="flex gap-1.5 items-center bg-foreground text-background px-5 py-2 rounded-full font-semibold cursor-pointer">
             <RiScissorsCutLine/>
             <span>Shorten</span>
