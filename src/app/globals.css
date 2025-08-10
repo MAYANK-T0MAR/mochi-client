@@ -7,6 +7,7 @@
   --secondary: #505050;
   --muted: #eff0f0;
   --muted-contrast: #e0e0e0;
+  --success: #28a745;
 }
 
 @theme inline {
@@ -16,6 +17,7 @@
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-muted-contrast: var(--muted-contrast);
+  --color-success: var(--success);
 
   --font-inter: var(--font-inter);
 }
