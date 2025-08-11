@@ -54,7 +54,7 @@ export default function URlshortnerTool() {
                         value={customUrl}
                         onChange={(e) => setCustomUrl(e.target.value)}
                     />
-                    <div className="text-secondary absolute top-0 left-0 bottom-0 flex items-center pl-7" >mochi.up.railway.app/</div>
+                    <div className="text-muted-foreground font-medium absolute top-0 left-0 bottom-0 flex items-center pl-7" >mochi.up.railway.app/</div>
                 </div>
 
                 <div className="w-full flex gap-1 md:gap-6 flex-wrap justify-center items-center mb-5">
@@ -63,7 +63,7 @@ export default function URlshortnerTool() {
                         {expirePeriod.map((expiresInPeriod, i) => (
                             <div
                                 key={i}
-                                className={`px-3 py-1 rounded-full text-sm cursor-pointer transition-all duration-300 ${expiresInPeriod === expiresIn ? 'bg-secondary text-background' : 'text-secondary'}`}
+                                className={`px-3 py-1 rounded-full text-sm cursor-pointer transition-all duration-300 ${expiresInPeriod === expiresIn ? 'bg-secondary text-foreground' : 'text-muted-foreground'}`}
                                 onClick={() => setExpiresIn(expiresInPeriod)}
                             >
                                 {expiresInPeriod}

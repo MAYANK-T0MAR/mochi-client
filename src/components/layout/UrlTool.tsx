@@ -10,13 +10,13 @@ export default function UrlTool() {
         <div className="w-full flex flex-col gap-8 justify-center items-center">
             <div className="flex gap-3 text-sm">
                 <div 
-                className={`${!showLinkTracker? 'underline underline-offset-4': 'bg-muted'} transition-all duration-300 px-3 py-1 rounded-full cursor-pointer`}
+                className={`${!showLinkTracker? 'text-muted-foreground cursor-text': 'bg-muted cursor-pointer'} transition-all duration-300 px-3 py-1 rounded-full`}
                 onClick={()=>setShowLinkTracker(false)}
                 >
                     Short URL
                 </div>
                 <div 
-                className={`${showLinkTracker? 'underline underline-offset-4': 'bg-muted'} transition-all duration-300 px-3 py-1 rounded-full cursor-pointer`}
+                className={`${showLinkTracker? 'text-muted-foreground cursor-text': 'bg-muted cursor-pointer'} transition-all duration-300 px-3 py-1 rounded-full`}
                 onClick={()=>setShowLinkTracker(true)}
                 >
                     Track Links
