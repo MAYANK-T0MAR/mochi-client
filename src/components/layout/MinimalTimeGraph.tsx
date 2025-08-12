@@ -105,7 +105,7 @@ const MinimalTimeGraph = ({clicksTimeDistribution}: {clicksTimeDistribution: str
   return (
     <Card className="w-full">
       <CardHeader className="pb-2">
-        <CardTitle className="text-lg font-medium">Click Frequency</CardTitle>
+        <CardTitle className="text-lg font-medium">Click Activity</CardTitle>
       </CardHeader>
       <CardContent className="pt-0">
         <ResponsiveContainer width="100%" height={300}>

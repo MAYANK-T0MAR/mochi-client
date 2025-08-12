@@ -1,10 +1,11 @@
 import Image from "next/image";
 import UrlTool from "@/components/layout/UrlTool";
+import FeatureSection from "@/components/layout/FeatureSection";
 
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col gap-34 items-center">
+    <div className="w-full flex flex-col gap-52 items-center">
 
       <div className="w-full relative max-w-3xl flex flex-col items-center justify-center gap-8">
 
@@ -23,9 +24,10 @@ export default function Home() {
 
       </div>
 
-      {/* <div className="w-full max-w-3xl rounded-3xl bg-foreground text-background pt-5 px-5 h-77">
-        <span className="text-2xl font-semibold">Track Your links</span>
-      </div> */}
+      <div className="w-full max-w-3xl">
+        <FeatureSection />
+      </div>
+      
 
     </div>
   );

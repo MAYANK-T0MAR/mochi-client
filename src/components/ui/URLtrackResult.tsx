@@ -1,3 +1,4 @@
+import Image from "next/image";
 import MinimalTimeGraph from "../layout/MinimalTimeGraph";
 import {
     Card,
@@ -25,7 +26,7 @@ export default function URLtrackResult({ urlTrackResult }: { urlTrackResult: url
                 <span className="text-sm text-muted-foreground">Redirects to <span className="underline underline-offset-4">{urlTrackResult.redirectsTo}</span></span>
             </div>
 
-            <div className="w-full flex gap-2">
+            <div className="w-full flex flex-col sm:flex-row gap-2">
                 <div className="flex-1">
                     <Card>
                         <CardHeader>
@@ -33,7 +34,7 @@ export default function URLtrackResult({ urlTrackResult }: { urlTrackResult: url
                             <CardDescription>Number of times the shortened link clicked.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="text-7xl">{urlTrackResult.totalClicks}</div>
+                            <div className="text-7xl text-right">{urlTrackResult.totalClicks}</div>
                         </CardContent>
                     </Card>
                 </div>
@@ -44,13 +45,21 @@ export default function URLtrackResult({ urlTrackResult }: { urlTrackResult: url
                             <CardDescription>Number of unique views on the shortened link.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <div className="text-7xl">{urlTrackResult.uniqueViews}</div>
+                            <div className="text-7xl text-right">{urlTrackResult.uniqueViews}</div>
                         </CardContent>
                     </Card>
                 </div>
             </div>
             <div className="w-full bg-contras rounded-2xl">
+                {urlTrackResult.clicksTimeDistribution.length > 0 ? 
                 <MinimalTimeGraph clicksTimeDistribution={urlTrackResult.clicksTimeDistribution} />
+                :
+                <div className="w-full flex flex-col items-center justify-center text-muted-foreground">
+                    <Image src="/surreal-hourglass.svg" height={100} width={100} alt="error illustration" className="w-full max-w-2xs"/>
+                    <div className="text-xl text-muted-foreground">No click activities yet...</div>
+                </div>
+                }
+                
             </div>
         </div>
     )

@@ -119,6 +119,10 @@
   box-shadow: rgb(255, 255, 255) 0px 22px 400px 255px;
 }
 
+.shadow-inner{
+  box-shadow: 0px -74px 40px -37px rgba(237,237,237,0.75) inset;
+}
+
 .scrollbar-hide {
   scrollbar-width: none;         /* Firefox */
   -ms-overflow-style: none;      /* IE 10+ */
