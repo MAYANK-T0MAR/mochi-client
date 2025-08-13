@@ -1,6 +1,7 @@
 import Image from "next/image";
 import UrlTool from "@/components/layout/UrlTool";
 import FeatureSection from "@/components/layout/FeatureSection";
+import CommunitySection from "@/components/layout/CommunitySection";
 
 
 export default function Home() {
@@ -26,6 +27,10 @@ export default function Home() {
 
       <div className="w-full max-w-3xl">
         <FeatureSection />
+      </div>
+
+      <div className="w-full max-w-3xl">
+        <CommunitySection/>
       </div>
       
 
