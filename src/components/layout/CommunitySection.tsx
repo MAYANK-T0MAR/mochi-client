@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { FaDiscord, FaGithub, FaLinkedin, FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
-import { MdOutlineVerified } from "react-icons/md";
-import { RiMailSendLine } from "react-icons/ri";
+import { FaDiscord } from "react-icons/fa6";
 import ProfileCard from "../ui/ProfileCard";
 
 export default function CommunitySection() {
@@ -9,7 +7,7 @@ export default function CommunitySection() {
         <div className="w-full flex flex-col gap-24">
             <div>
                 <div className="w-full flex flex-col items-center gap-9 px-4 pt-11 pb-9 relative">
-                    <div className="absolute -top-18 left-1/2 -translate-x-1/2">
+                    <div className="flex w-full justify-center">
                         <Image src="https://cdn.discordapp.com/icons/1381660834836517024/ae3e71e8394100518030bd6075fcf271.png?size=1024" width={1024} height={1024} alt="server icon" className="w-24 rounded-3xl drop-shadow-[0px_2px_3px_theme(colors.muted-foreground)]" />
                     </div>
                     <div className="w-full text-center flex-col gap-2 flex items-center">
@@ -17,13 +15,13 @@ export default function CommunitySection() {
                         <span className="max-w-115 leading-5 tracking-[-0.05em]">
                             Barely Dev is a fun community for fellow developers ofcourse both learner and advanced nerds.
                         </span>
-                        <div className="w-max absolute -bottom-11 left-1/2 -translate-x-1/2 flex gap-3 items-center bg-foreground text-background px-5 py-2 rounded-full font-semibold cursor-pointer">
+                        <a href="https://discord.gg/EsaZWDDn" target="_blank" rel="noopener noreferrer" className="w-max absolute -bottom-11 left-1/2 -translate-x-1/2 flex gap-3 items-center bg-foreground text-background px-5 py-2 rounded-full font-semibold cursor-pointer">
                             <FaDiscord className="text-xl" />
                             <span>Join the community</span>
-                        </div>
+                        </a>
                     </div>
-                    <div className="w-full max-w-155 p-4 bg-muted text-muted-foreground italic border-l-4 border-primary rounded-tr-2xl rounded-br-2xl leading-relaxed text-sm sm:text-base">
-                        This project started out as a fastApi Learning project in our community. Sayan was learning basic fastApi structure and things got kinda sidetracked on his part. That's when Mayank jumped in with the frontend and sidetracked it even more – and this is what it ended up turning into.
+                    <div className="w-full max-w-155 p-4 bg-muted text-muted-foreground italic border-l-4 border-muted-foreground rounded-tr-2xl rounded-br-2xl leading-relaxed text-sm sm:text-base">
+                        This project started out as a fastApi Learning project in our community. <a href="https://github.com/synbhwl" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-all duration-300 ease-in-out">Sayan</a> was learning basic fastApi structure and things got kinda sidetracked on his part. That's when <a href="https://github.com/MAYANK-T0MAR" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-all duration-300 ease-in-out">Mayank</a> jumped in with the frontend and sidetracked it even more – and this is what it ended up turning into.
                     </div>
                 </div>
             </div>

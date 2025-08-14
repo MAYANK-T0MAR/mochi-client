@@ -4,7 +4,7 @@ import { Card } from "../ui/card";
 export default function FeatureSection() {
     return (
         <div className="w-full flex flex-col gap-4">
-            <div className="text-5xl text-center tracking-[-0.05em] mb-8">Features</div>
+            <div className="text-5xl text-center tracking-[-0.05em] mb-8 underline underline-offset-10">Features</div>
             <div className="w-full flex items-center justify-center gap-4 flex-col md:flex-row">
                 <Card className="flex-1 max-w-94 shadow-inner pb-0">
                     <div className="flex flex-col px-4 overflow-hidden">

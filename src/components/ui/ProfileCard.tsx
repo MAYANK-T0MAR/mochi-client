@@ -40,7 +40,7 @@ export default function ProfileCard({gitHubPfp, name, description, gitHubLink, t
                     </div>
 
                     <a href={`mailto:${mailAddress}`} target="_blank" rel="noopener noreferrer" className="px-5 py-2 font-semibold flex items-center gap-2 rounded-full bg-foreground text-background">
-                        <span>Mail</span>
+                        <span>Email</span>
                         <RiMailSendLine />
                     </a>
                 </div>
