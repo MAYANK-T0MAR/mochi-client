@@ -14,6 +14,7 @@ export default function URlshortnerTool() {
     const shortenedURl = "https://mochi.up.railway.app/something"
 
     const expirePeriod = [
+        "1 Hour",
         "1 Day",
         "1 Week",
         "1 Month",
@@ -59,7 +60,7 @@ export default function URlshortnerTool() {
 
                 <div className="w-full flex gap-1 md:gap-6 flex-wrap justify-center items-center mb-5">
                     <div>Expires in:</div>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center flex-wrap">
                         {expirePeriod.map((expiresInPeriod, i) => (
                             <div
                                 key={i}

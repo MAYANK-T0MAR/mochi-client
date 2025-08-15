@@ -4,80 +4,78 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { FadeInSection } from "./FadeInSection";
 
 
 export default function FaqSection() {
 
     const faqs = [
         {
-            question: "Is Mochi URL Shortener free to use?",
-            answer: "Yes! Mochi offers a generous free tier that includes up to 1,000 shortened URLs per month with basic analytics. For advanced features and higher limits, we offer affordable premium plans."
+            question: "Can I use my own custom alias for a shortened URL?",
+            answer: "Yes! When creating a shortened URL, you can specify your own custom alias instead of a random one. This alias will be appended to the shortened link, making it easier to remember or share."
         },
         {
-            question: "How reliable are the shortened URLs?",
-            answer: "Our URLs are backed by a 99.9% uptime guarantee with global CDN infrastructure. We also provide automatic failover and redundancy to ensure your links are always accessible."
+            question: "How long will my shortened URL remain active?",
+            answer: "It never expires by default and you can also choose the expiry time when creating the link — options include 1 hour, 1 day, 1 week, 1 month, or never expire. After the chosen duration, the shortened link will stop working automatically."
         },
         {
-            question: "Can I customize my shortened URLs?",
-            answer: "Absolutely! You can create custom aliases, use your own domain, and even add branded elements to your shortened URLs. This is perfect for maintaining brand consistency across your campaigns."
+            question: "Does the URL shortener provide analytics?",
+            answer: "Yes! You can view detailed analytics for your shortened links, including total clicks, unique visits, and click-time history."
         },
         {
-            question: "What kind of analytics do you provide?",
-            answer: "We provide comprehensive analytics including click counts, geographic data, referrer information, device types, browser statistics, and time-based analytics to help you understand your audience better."
+            question: "Is the redirection fast?",
+            answer: "Absolutely, when someone clicks your shortened link, they're instantly redirected to the original destination."
+        },
+        {
+            question: "Do I need to create an account to use the service?",
+            answer: "No registration or login is required. You can start shortening URLs immediately without any authentication."
         },
         {
             question: "Is there an API available for developers?",
-            answer: "Yes! We offer a fully-featured RESTful API with comprehensive documentation. You can integrate URL shortening directly into your applications, automate bulk operations, and access all analytics data programmatically."
+            answer: <span>Yep! We've got a RESTful API ready to roll. All the details are in our GitHub repo — examples, docs, and everything you need to integrate. Check it out here: <a href="https://github.com/synbhwl/mochi" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">github.com/synbhwl/mochi</a></span>
         },
         {
-            question: "How do you ensure the security of shortened URLs?",
-            answer: "We implement multiple security measures including malware scanning, phishing detection, spam filtering, and SSL encryption. We also provide click fraud protection and suspicious activity monitoring."
+            question: "Is there a limit to how many URLs I can shorten?",
+            answer: "No, you can shorten as many URLs as you want without any restrictions."
         },
         {
-            question: "Can I track campaign performance?",
-            answer: "Yes! You can organize your links into campaigns, track performance metrics, compare different campaigns, and generate detailed reports. This makes it easy to measure ROI and optimize your marketing efforts."
+            question: "Will my shortened URL work internationally?",
+            answer: "Yes. As long as the original website is accessible in the user’s country, your shortened link will work globally."
         },
-        {
-            question: "What happens if I exceed my plan limits?",
-            answer: "We'll notify you when you're approaching your limits. You can upgrade your plan at any time, or if you exceed limits, additional usage is billed at reasonable overage rates. We never shut down your existing links."
-        },
-        {
-            question: "Can I export my data?",
-            answer: "Absolutely! You can export all your URLs, analytics data, and reports in various formats including CSV, JSON, and PDF. We believe in data portability and transparency."
-        },
-        {
-            question: "Do shortened URLs expire?",
-            answer: "Free tier URLs never expire, but inactive URLs (no clicks for 2+ years) may be archived. Premium users get permanent links with guaranteed availability. You can also set custom expiration dates if needed."
-        }
     ];
 
     return (
         <div className="w-full flex flex-col gap-9">
-            <div className="w-full flex flex-col items-center">
-                <span className="hidden sm:block text-5xl tracking-[-0.05em]">Frequently Asked Questions</span>
-                <span className="block sm:hidden text-5xl tracking-[-0.05em]">FAQs</span>
-                <div className="mt-4 max-w-150 text-center text-muted-foreground">
-                    It's a simple project. Honestly, we shouldn't be doing FAQ for this. Still, here are some answers in case you feel like reading them.
+            <FadeInSection>
+                <div className="w-full flex flex-col items-center">
+                    <span className="hidden sm:block text-5xl tracking-[-0.05em]">Frequently Asked Questions</span>
+                    <span className="block sm:hidden text-5xl tracking-[-0.05em]">FAQs</span>
+                    <div className="mt-4 max-w-150 text-center text-muted-foreground">
+                        It's a simple project. Honestly, we shouldn't be doing FAQ for this. Still, here are some answers in case you feel like reading them.
+                    </div>
                 </div>
-            </div>
-            <div className="w-full flex flex-col gap-5">
-                <Accordion type="single" collapsible className="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <AccordionItem
-                            key={index}
-                            value={`item-${index}`}
-                            className="bg-background border border-border rounded-lg px-6 py-2"
-                        >
-                            <AccordionTrigger className="text-lef text-base cursor-pointer hover:no-underline">
-                                {faq.question}
-                            </AccordionTrigger>
-                            <AccordionContent className="text-text-secondary leading-relaxed pt-2">
-                                {faq.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
-            </div>
+            </FadeInSection>
+
+            <FadeInSection>
+                <div className="w-full flex flex-col gap-5">
+                    <Accordion type="single" collapsible className="space-y-4">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem
+                                key={index}
+                                value={`item-${index}`}
+                                className="bg-background border border-border rounded-lg px-6 py-2"
+                            >
+                                <AccordionTrigger className="text-lef text-base cursor-pointer hover:no-underline">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-text-secondary leading-relaxed pt-2">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </FadeInSection>
         </div>
     )
 }
