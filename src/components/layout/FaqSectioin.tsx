@@ -32,7 +32,7 @@ export default function FaqSection() {
         },
         {
             question: "Is there an API available for developers?",
-            answer: <span>Yep! We've got a RESTful API ready to roll. All the details are in our GitHub repo — examples, docs, and everything you need to integrate. Check it out here: <a href="https://github.com/synbhwl/mochi" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">github.com/synbhwl/mochi</a></span>
+            answer: <span>{"Yep! We've got a RESTful API ready to roll. All the details are in our GitHub repo — examples, docs, and everything you need to integrate. Check it out here:"} <a href="https://github.com/synbhwl/mochi" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">github.com/synbhwl/mochi</a></span>
         },
         {
             question: "Is there a limit to how many URLs I can shorten?",
@@ -51,7 +51,7 @@ export default function FaqSection() {
                     <span className="hidden sm:block text-5xl tracking-[-0.05em]">Frequently Asked Questions</span>
                     <span className="block sm:hidden text-5xl tracking-[-0.05em]">FAQs</span>
                     <div className="mt-4 max-w-150 text-center text-muted-foreground">
-                        It's a simple project. Honestly, we shouldn't be doing FAQ for this. Still, here are some answers in case you feel like reading them.
+                        {"It's a simple project. Honestly, we shouldn't be doing FAQ for this. Still, here are some answers in case you feel like reading them."}
                     </div>
                 </div>
             </FadeInSection>

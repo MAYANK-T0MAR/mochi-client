@@ -2,10 +2,8 @@ import Image from "next/image";
 import MinimalTimeGraph from "../layout/MinimalTimeGraph";
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
