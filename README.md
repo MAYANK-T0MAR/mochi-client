@@ -2,6 +2,8 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Work_in_Progress-yellow?style=for-the-badge)
 
+# Live Demo
+Check out the live project - [Mochi](https://mochi-client.vercel.app/)
 
 # Mochi – Client
 
