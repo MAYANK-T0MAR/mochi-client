@@ -117,7 +117,7 @@ export default function URLtrackerTool() {
                     onChange={(e) => setShortUrlInput(e.target.value)}
                 />
             </div>
-            <div className="text-sm text-destructive">{urlInputError}</div>
+            <div className="text-sm text-destructive px-7">{urlInputError}</div>
 
 
             <button
