@@ -15,11 +15,31 @@ export const metadata: Metadata = {
   description: "Url Shortener",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+  try {
+    const res = await fetch("https://mochi-production.up.railway.app/", {
+      cache: "no-store", 
+    });
+
+    if (!res.ok) {
+      console.error(`Ping failed with status ${res.status}`);
+    } else {
+      const text = await res.text();
+      console.log("Ping response:", text);
+    }
+  } catch (err) {
+    console.error("Ping error:", err);
+  }
+
+
+
+
   return (
     <html lang="en" className="scrollbar-hide">
       <body
@@ -27,7 +47,7 @@ export default function RootLayout({
       >
         {children}
         <div className="select-none pointer-events-none top-[-10px] left-0 absolute -z-10 w-full h-full bg-background bg-[linear-gradient(to_right,#efefef_1px,transparent_1px),linear-gradient(to_bottom,#efefef_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

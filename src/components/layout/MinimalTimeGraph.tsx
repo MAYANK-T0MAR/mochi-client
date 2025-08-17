@@ -80,27 +80,6 @@ const MinimalTimeGraph = ({clicksTimeDistribution}: {clicksTimeDistribution: str
     return chartData;
   }, [screenWidth]);
 
-  // const CustomTooltip = ({ active, payload }: any) => {
-  //   if (active && payload && payload.length) {
-  //     const data = payload[0].payload;
-  //     return (
-  //       <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg max-w-xs">
-  //         <p className="font-semibold text-gray-900 mb-2">{data.fullDate}</p>
-  //         <p className="text-sm text-gray-600 mb-2">Total Clicks: {data.frequency}</p>
-  //         <div className="max-h-32 overflow-y-auto">
-  //           <p className="text-xs text-gray-500 mb-1">Timestamps:</p>
-  //           {data.details.slice(0, 5).map((detail: string, index: number) => (
-  //             <p key={index} className="text-xs text-gray-700">{detail}</p>
-  //           ))}
-  //           {data.details.length > 5 && (
-  //             <p className="text-xs text-gray-400 italic">+{data.details.length - 5} more...</p>
-  //           )}
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  //   return null;
-  // };
 
   interface TooltipPayload {
     frequency: number;
@@ -127,7 +106,7 @@ const MinimalTimeGraph = ({clicksTimeDistribution}: {clicksTimeDistribution: str
           <p className="font-semibold text-gray-900 mb-2">{data.fullDate}</p>
           <p className="text-sm text-gray-600 mb-2">Total Clicks: {data.frequency}</p>
           <div className="max-h-32 overflow-y-auto">
-            <p className="text-xs text-gray-500 mb-1">Timestamps:</p>
+            <p className="text-xs text-gray-500 mb-1">Timestamps {"(UTC)"}:</p>
             {data.details.slice(0, 5).map((detail: string, index: number) => (
               <p key={index} className="text-xs text-gray-700">{detail}</p>
             ))}
