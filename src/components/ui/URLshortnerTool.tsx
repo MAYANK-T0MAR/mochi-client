@@ -61,7 +61,7 @@ export default function URlshortnerTool() {
             }
         }
 
-        let requestData: requestDataProps = { url: urlInput }
+        const requestData: requestDataProps = { url: urlInput }
         if (customUrl) requestData.custom_code = customUrl
         if (expiresIn != "Never") {
             if (expiresIn === "1 Hour") requestData.expiry = "1h"
