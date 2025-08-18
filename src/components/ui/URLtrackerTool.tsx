@@ -149,6 +149,17 @@ export default function URLtrackerTool() {
                 ) : null
             }
 
+            {/* This is just for filler. Why we need filler here? it's cause we want the first 100vh screen to only have our tool which works with UrlShortnerTool component but when the tool gets switched to this component the feature section comes up that's because the UrlShortnerTool keeps the result div in the DOM and hides/unhides that using opacity thats why that result div acts as filler for that tool but this tool render/unrender the result div so it'd need filler and i'm too lazy to bring consistency in this so i'm fine with the filler divs */}
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            <div className="w-full"></div>
+            {/* ------------Filler-------------- */}
+
 
 
         </div>
