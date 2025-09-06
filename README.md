@@ -24,6 +24,10 @@ This is just a Next.js frontend for [mochi](https://github.com/synbhwl/mochi), a
 - Responsive and minimal UI
 - Analytics, custom url name, etc.
 
+<img width="1100" height="925" alt="track link result component" src="https://github.com/user-attachments/assets/12af00d7-d05b-46e3-a442-14a69310a742" />
+<img width="1916" height="938" alt="homepage" src="https://github.com/user-attachments/assets/5c0900e6-c934-40f2-8c60-49ddca4bdaf6" />
+
+
 ---
 
 
